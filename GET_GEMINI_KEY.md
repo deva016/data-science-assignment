@@ -1,45 +1,61 @@
-# 🔑 Get Your FREE Google Gemini API Key
+# 🔑 Getting Your FREE Gemini API Key
 
-## Step 1: Visit Google AI Studio
-Go to: **https://aistudio.google.com/apikey**
+## Quick Start (2 Minutes)
 
-## Step 2: Sign In
-- Sign in with your Google account
-- No credit card required!
+### Step 1: Visit Google AI Studio
+**Go to**: https://aistudio.google.com/apikey
 
-## Step 3: Create API Key
+### Step 2: Sign In
+- Use your **Google account**
+- ✅ **No credit card required!**
+
+### Step 3: Create API Key
 1. Click **"Get API key"** or **"Create API key"**
-2. Select "Create API key in new project" (or use existing project)
-3. Copy your API key (looks like: `AIza...`)
+2. Select **"Create API key in new project"**
+3. **Copy** your key (starts with `AIza...`)
 
-## Step 4: Add to .env File
-Open `.env` file and replace this line:
-```
-GEMINI_API_KEY=your-gemini-api-key-here
-```
+### Step 4: Add to Your Project
+Open `d:\project\data-science-assignment\.env` and add:
 
-With your actual key:
-```
-GEMINI_API_KEY=AIzaSyABC123...your-actual-key
-```
-
-## Step 5: Test It!
 ```bash
-python src/llm_service.py
+GEMINI_API_KEY=AIzaSy...your-actual-key-here
 ```
 
-You should see: ✓ Gemini API call successful
+### Step 5: Restart Backend
+```bash
+# Stop the current backend (Ctrl+C)
+# Then restart:
+python main.py
+```
 
 ---
 
-## Free Tier Limits
+## ✅ FREE Tier Limits
 
-- **15 requests per minute (RPM)**
-- **1 million tokens per minute (TPM)**
-- **1,500 requests per day (RPD)**
+Google Gemini offers generous free limits:
+- **15 requests per minute**
+- **1 million tokens per minute**  
+- **1,500 requests per day**
 
-More than enough for your assignment! 🎉
+More than enough for development and this assignment! 🎉
 
 ---
 
-**Ready?** Get your key now: https://aistudio.google.com/apikey
+## 🔐 Security Note
+
+**Never commit your API key to GitHub!**
+
+The `.gitignore` file is already configured to exclude `.env`, keeping your key safe.
+
+---
+
+## 🆘 Troubleshooting
+
+**API key not working?**
+- Ensure no extra spaces in `.env` file
+- Key should start with `AIza`
+- Restart the backend after adding the key
+
+**Need more help?**  
+See the [SETUP_GUIDE.md](SETUP_GUIDE.md) for complete instructions.
+

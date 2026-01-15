@@ -1,89 +1,39 @@
-# 🚨 API Credits Required - Solutions
+# 💡 LLM Provider Information
 
-## Current Situation
+## ✅ Current Setup: Google Gemini (FREE)
 
-Both LLM providers require credits/billing:
+This project uses **Google Gemini 2.5 Flash** as the primary LLM provider.
 
-### Claude (Anthropic)
-- **Error**: "Please go to Plans & Billing to upgrade or purchase credits"
-- **Solution**: https://console.anthropic.com/settings/billing
-- **Cost**: ~$3 per million input tokens (~$0.003 per summary)
+### Why Gemini?
+- ✅ **100% FREE** - No credit card required
+- ✅ **Generous FREE tier** - 15 requests/minute, 1,500/day
+- ✅ **Easy setup** - Get API key in 2 minutes
+- ✅ **Excellent performance** - Great for structured JSON outputs
 
-### OpenAI
-- **Error**: "Quota exceeded" 
-- **Solution**: https://platform.openai.com/billing/overview
-- **Cost**: ~$5 per million tokens (~$0.005 per summary)
-
----
-
-## Option 1: Add Credits (Recommended for Assignment) 💳
-
-**Best for production demo**:
-1. Add $5-10 to either Claude OR OpenAI account
-2. This gives you 1000+ summary generations
-3. More than enough for your assignment demo
-
-**Steps**:
-1. **Claude**: https://console.anthropic.com/settings/billing → Add payment
-2. **OpenAI**: https://platform.openai.com/billing/overview → Add payment
+### Get Your FREE Gemini API Key
+👉 See **[GET_GEMINI_KEY.md](GET_GEMINI_KEY.md)** for step-by-step instructions
 
 ---
 
-## Option 2: Use FREE Alternative LLMs 🆓
+## 🔄 Backup Provider (Optional)
 
-I can modify the code to use **FREE** LLM providers:
+The system includes **OpenAI GPT-4o** as an automatic fallback if Gemini fails.
 
-### A. Groq (Fast & Free)
-- **Models**: Llama 3.1, Mixtral, Gemma
-- **Free Tier**: Very generous limits
-- **Speed**: Extremely fast
-- **Sign up**: https://console.groq.com/
-
-### B. Google Gemini
-- **Model**: Gemini 1.5 Flash (free tier)
-- **Free Tier**: 15 requests/minute
-- **Sign up**: https://aistudio.google.com/apikey
-
-### C. Hugging Face Inference API
-- **Models**: Various open-source models
-- **Free Tier**: Available
-- **Sign up**: https://huggingface.co/settings/tokens
+**Note**: OpenAI requires credits after free trial, so Gemini is recommended as the primary provider for this assignment.
 
 ---
 
-## Option 3: Mock/Demo Mode 🎭
+## 🛠️ Troubleshooting LLM Issues
 
-For demonstration purposes only, I can create a **mock mode** that generates sample summaries from templates (no API calls).
+### "Gemini API Error"
+- Verify your API key is correct in `.env`
+- Check you have an active internet connection
+- Ensure you haven't exceeded rate limits (15/min)
 
-**Pros**: Works instantly, no cost  
-**Cons**: Not real AI, just template-based
+### "Both LLM providers failed"
+- Make sure `GEMINI_API_KEY` is set in `.env` file
+- Try restarting the backend: `python main.py`
 
----
+### Need More Help?
+See the main **[README.md](README.md)** for complete troubleshooting guide.
 
-## My Recommendation
-
-For your **assignment**:
-
-1. **Best Choice**: Add $5 to **Claude** account
-   - Superior medical content understanding
-   - Will impress evaluators
-   - Costs ~$0.10 for 30 test runs
-
-2. **Free Alternative**: Switch to **Groq** (Llama 3.1)
-   - Completely free
-   - Fast and capable
-   - Good for demos
-
-3. **Quick Demo**: Use **mock mode** if urgent
-   - No API needed
-   - Shows the application flow
-
----
-
-## What Would You Like?
-
-Reply with:
-- **"Add credits"** - I'll guide you through adding credits
-- **"Use Groq"** - I'll switch to Groq (free)
-- **"Use Gemini"** - I'll switch to Google Gemini (free)
-- **"Mock mode"** - I'll create demo mode with templates

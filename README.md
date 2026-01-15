@@ -137,6 +137,20 @@ data-science-assignment/
 └── README.md                      # This file
 ```
 
+## 📚 Documentation
+
+Comprehensive guides to help you get started:
+
+| Document | Description |
+|----------|-------------|
+| **[SETUP_GUIDE.md](SETUP_GUIDE.md)** | 🚀 Quick start guide - Get running in 5 minutes |
+| **[GET_GEMINI_KEY.md](GET_GEMINI_KEY.md)** | 🔑 Step-by-step: Get your FREE Gemini API key |
+| **[API_CREDITS_SOLUTIONS.md](API_CREDITS_SOLUTIONS.md)** | 💡 LLM provider information and troubleshooting |
+| **[ASSIGNMENT_CHECKLIST.md](ASSIGNMENT_CHECKLIST.md)** | ✅ Requirements verification checklist |
+| **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** | 🌐 Optional: Deploy to cloud platforms |
+
+**New to the project?** Start with [SETUP_GUIDE.md](SETUP_GUIDE.md) for the fastest path to running the application.
+
 ## 🔧 Configuration
 
 ### Environment Variables (`.env`)
