@@ -53,3 +53,7 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Internal documentation (not for assignment submission)
+DEPLOYMENT_GUIDE.md
+ASSIGNMENT_CHECKLIST.md
