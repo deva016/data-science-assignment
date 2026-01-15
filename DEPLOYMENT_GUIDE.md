@@ -32,9 +32,9 @@ Your code is already on GitHub: https://github.com/deva016/data-science-assignme
 ### Step 4: Add Your Gemini API Key
 1. In Streamlit Cloud dashboard, click **"Settings"** (⚙️)
 2. Go to **"Secrets"**
-3. Add this:
+3. Add this (use YOUR new Gemini API key):
    ```toml
-   GEMINI_API_KEY = "AIzaSyDuWjmygJv9d8auIALzMhtiVOCbcZW3GJs"
+   GEMINI_API_KEY = "your-gemini-api-key-here"
    API_HOST = "localhost"
    API_PORT = "8000"
    ```
