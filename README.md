@@ -146,8 +146,6 @@ Comprehensive guides to help you get started:
 | **[SETUP_GUIDE.md](SETUP_GUIDE.md)** | 🚀 Quick start guide - Get running in 5 minutes |
 | **[GET_GEMINI_KEY.md](GET_GEMINI_KEY.md)** | 🔑 Step-by-step: Get your FREE Gemini API key |
 | **[API_CREDITS_SOLUTIONS.md](API_CREDITS_SOLUTIONS.md)** | 💡 LLM provider information and troubleshooting |
-| **[ASSIGNMENT_CHECKLIST.md](ASSIGNMENT_CHECKLIST.md)** | ✅ Requirements verification checklist |
-| **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** | 🌐 Optional: Deploy to cloud platforms |
 
 **New to the project?** Start with [SETUP_GUIDE.md](SETUP_GUIDE.md) for the fastest path to running the application.
 
@@ -230,8 +228,8 @@ curl -X POST http://localhost:8000/generate_summary \
 ```python
 def generate_summary(patient_data):
     try:
-        # 1️⃣ PRIMARY: Try Claude 3.5 Sonnet
-        return call_claude(patient_data)
+        # 1️⃣ PRIMARY: Try Google Gemini 2.5 Flash (FREE)
+        return call_gemini(patient_data)
     except:
         # 2️⃣ BACKUP: Fallback to OpenAI GPT-4o
         return call_openai(patient_data)
@@ -300,7 +298,7 @@ Educational project for data science assignment.
 
 ## 🔗 Resources
 
-- [Anthropic Claude API Docs](https://docs.anthropic.com/)
+- [Google AI Studio (Gemini)](https://aistudio.google.com/)
 - [OpenAI API Docs](https://platform.openai.com/docs)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
