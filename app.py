@@ -113,7 +113,14 @@ def display_summary(summary_data: Dict[str, Any]):
     provider = summary_data.get("provider_used", "unknown")
     st.divider()
     
-    provider_emoji = "🟣" if provider == "claude" else "🟢"
+    # Emoji based on provider
+    if provider == "gemini":
+        provider_emoji = "�"
+    elif provider == "openai":
+        provider_emoji = "🔵"
+    else:
+        provider_emoji = "⚪"
+    
     st.caption(f"{provider_emoji} Generated using: **{provider.upper()}**")
 
 
@@ -167,10 +174,10 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 🤖 AI Providers")
     st.sidebar.info("""
-    **Primary:** Claude 3.5 Sonnet (Anthropic)  
+    **Primary:** Gemini 2.5 Flash (Google) 🆓  
     **Backup:** GPT-4o (OpenAI)
     
-    The system automatically falls back to OpenAI if Claude is unavailable.
+    The system automatically falls back to OpenAI if Gemini is unavailable.
     """)
     
     # Generate button
@@ -237,7 +244,7 @@ def main():
         with st.expander("ℹ️ About this Application"):
             st.markdown("""
             ### Features
-            - **Dual-LLM Architecture**: Uses Claude 3.5 Sonnet with OpenAI fallback
+            - **Dual-LLM Architecture**: Uses Google Gemini 2.5 Flash (FREE) with OpenAI fallback
             - **Citation Tracking**: Every claim is backed by source data
             - **Comprehensive Analysis**: Covers diagnoses, vitals, wounds, medications, and functional status
             - **Evidence-Based**: All summaries are grounded in actual patient data
