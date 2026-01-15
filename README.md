@@ -2,14 +2,17 @@
 
 A sophisticated AI-powered application that generates comprehensive, evidence-based clinical summaries for home health patients with **dual-LLM architecture** and **citation tracking**.
 
+**🔗 Live Repository**: https://github.com/deva016/data-science-assignment
+
 ## 🌟 Key Features
 
-- **🤖 Dual-LLM Architecture**: Claude 3.5 Sonnet (primary) with GPT-4o (fallback)
+- **🤖 Dual-LLM Architecture**: Google Gemini 2.5 Flash (FREE, primary) with OpenAI (fallback)
 - **📚 Citation Tracking**: Every clinical claim is backed by source data
 - **🔄 Automatic Fallback**: Seamless switching between AI providers
 - **📊 Comprehensive Analysis**: Diagnoses, vitals, wounds, medications, functional status
 - **🎯 Evidence-Based**: All summaries grounded in actual patient data
 - **🚀 Production-Ready**: Robust error handling and resilience
+- **💰 FREE to Use**: Primary LLM (Gemini) requires no payment
 
 ## 🏗️ Architecture
 
@@ -29,17 +32,16 @@ A sophisticated AI-powered application that generates comprehensive, evidence-ba
     ┌────▼─────────────┐
     │   LLM Service    │  ← AI Generation
     │                  │
-    │  1️⃣ Claude 3.5   │  (Primary)
-    │  2️⃣ GPT-4o       │  (Fallback)
+    │  1️⃣ Gemini 2.5   │  (Primary - FREE)
+    │  2️⃣ OpenAI       │  (Fallback)
     └──────────────────┘
 ```
 
 ## 📋 Prerequisites
 
 - Python 3.8 or higher
-- API Keys (free tier available):
-  - **Anthropic Claude** (Primary): [Get free $5 credits](https://console.anthropic.com/)
-  - **OpenAI GPT-4o** (Backup): [Get free $5 credits](https://platform.openai.com/signup)
+- **FREE Google Gemini API Key**: [Get it here](https://aistudio.google.com/apikey) (No credit card!)
+- Optional: OpenAI API key for fallback
 
 ## ⚡ Quick Start
 
@@ -68,10 +70,18 @@ pip install -r requirements.txt
 # Copy environment template
 copy .env.example .env
 
-# Edit .env and add your API keys:
-# ANTHROPIC_API_KEY=sk-ant-your-actual-key-here
-# OPENAI_API_KEY=sk-your-actual-key-here
+# Edit .env and add your Gemini API key:
+# GEMINI_API_KEY=AIzaSy...your-actual-gemini-key-here
+# 
+# Optional: Add OpenAI key for fallback
+# OPENAI_API_KEY=sk-your-openai-key
 ```
+
+**Get FREE Gemini API Key**:
+1. Visit: https://aistudio.google.com/apikey
+2. Sign in with Google account (no credit card!)
+3. Click "Create API key"
+4. Copy and paste into `.env` file
 
 ### 3️⃣ Start the Backend
 
@@ -132,20 +142,20 @@ data-science-assignment/
 ### Environment Variables (`.env`)
 
 ```bash
-# Primary LLM (Anthropic Claude)
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+# Primary LLM (Google Gemini - FREE)
+GEMINI_API_KEY=AIzaSy...your-key-here
 
-# Backup LLM (OpenAI)
+# Backup LLM (OpenAI - Optional)
 OPENAI_API_KEY=sk-your-key-here
 
 # Model Configuration
-CLAUDE_MODEL=claude-3-5-sonnet-20241022
+GEMINI_MODEL=gemini-2.5-flash
 OPENAI_MODEL=gpt-4o
 TEMPERATURE=0.3
 
 # Fallback Settings
 USE_FALLBACK=true                  # Enable OpenAI fallback
-# FORCE_PROVIDER=claude            # Force specific provider (optional)
+# FORCE_PROVIDER=gemini            # Force specific provider (optional)
 ```
 
 ## 🚀 API Endpoints
@@ -226,10 +236,10 @@ Each clinical claim is linked to its source:
 
 ## 💡 Tips
 
-- **Free Credits**: Both Claude and OpenAI offer $5 free credits (sufficient for this assignment)
-- **Primary Provider**: Claude 3.5 Sonnet is optimized for medical/clinical content
-- **Fallback**: If Claude fails, system automatically uses GPT-4o
-- **Force Provider**: Set `FORCE_PROVIDER=openai` or `claude` in `.env` to use specific provider
+- **FREE to Use**: Gemini 2.5 Flash is completely free with generous limits
+- **Primary Provider**: Gemini optimized for structured JSON outputs
+- **Fallback**: If Gemini fails, system automatically uses OpenAI (if configured)
+- **Force Provider**: Set `FORCE_PROVIDER=gemini` or `openai` in `.env` to use specific provider
 
 ## 🐛 Troubleshooting
 
