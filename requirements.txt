@@ -1,24 +1,21 @@
-# Backend Framework
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
-pydantic-settings==2.1.0
+# Backend: FastAPI + Uvicorn
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
 
-# Frontend
-streamlit==1.30.0
+# Frontend: Streamlit
+streamlit>=1.32.0
 
 # Data Processing
-pandas==2.1.4
-python-dotenv==1.0.0
+pandas>=2.2.0
+python-dotenv>=1.0.0
 
 # LLM Integration - Primary (Google Gemini - FREE)
 google-generativeai>=0.8.0
 
-# LLM Integration - Backup (Claude)
-anthropic==0.18.1
-
 # LLM Integration - Backup (OpenAI)
-openai==1.10.0
+openai>=1.12.0
 
 # Utilities
-requests==2.31.0
+requests>=2.31.0
